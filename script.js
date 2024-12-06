@@ -26,10 +26,10 @@ document.getElementById('upload-form').addEventListener('submit', (event) => {
     s3.putObject(params, (err, data) => {
         if (err) {
             console.error('Error uploading file:', err);
-            alert('An error occurred while uploading the file.');
+            // alert('An error occurred while uploading the file.');
         } else {
             console.log('File uploaded successfully:', data);
-            alert('File uploaded successfully!');
+            // alert('File uploaded successfully!');
             triggerLambdaForLabeling(key);
         }
     });
