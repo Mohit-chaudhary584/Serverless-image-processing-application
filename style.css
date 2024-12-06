@@ -43,39 +43,33 @@ header {
 }
 
 #list>li>a:hover {
-    background-color: white;
+    background-color: #e3ecec;
     color: black;
 }
 
-#logo {
+#bar {
     color: white;
     font-size: 17px;
     background-color: #219191;
     padding: 8px 18px;
-}
-
-#logo>i {
-    margin-right: 10px;
-}
-
-#logo:hover {
-    background-color: #ccc;
-    color: black;
-}
-
-#search {
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 9px 15px;
-    background-color: #219191;
-    border-radius: 25px;
     cursor: pointer;
 }
 
-#search:hover {
-    background-color: #ccc;
-    color: black;
+#bar:hover {
+    background-color: #26a9a9;
+}
+
+#user {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 11px 15px;
+    background-color: #219191;
+    cursor: pointer;
+}
+
+#user:hover {
+    background-color: #26a9a9;
 }
 
 #project {
@@ -90,7 +84,7 @@ header {
     color: #333;
 }
 
-#project span{
+#project span {
     color: #219191;
 }
 
@@ -241,20 +235,20 @@ ul li {
     margin-top: 10px;
 }
 
-#work {
+#abstract {
     padding: 80px 20px;
     background-color: #fff;
     text-align: center;
 }
 
-#work h1 {
+#abstract h1 {
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 30px;
     color: #333;
 }
 
-#work p {
+#abstract p {
     text-align: justify;
     font-size: 20px;
     line-height: 1.6;
@@ -274,38 +268,38 @@ ul li {
     gap: 30px;
 }
 
-.contact {
+.contactcard {
     width: 48%;
     text-align: left;
 }
 
-.contact h1 {
+.contactcard h1 {
     font-size: 30px;
     font-weight: 600;
     color: #333;
     margin-bottom: 15px;
 }
 
-.contact h2 {
+.contactcard h2 {
     font-size: 20px;
     font-weight: 500;
     color: #219191;
     margin-bottom: 15px;
 }
 
-.contact p {
+.contactcard p {
     font-size: 18px;
     color: #555;
     margin-bottom: 10px;
 }
 
-.contact i {
+.contactcard i {
     color: #219191;
     font-size: 20px;
     margin-right: 10px;
 }
 
-.form {
+.formcard {
     width: 58%;
     background-color: #fff;
     padding: 20px;
