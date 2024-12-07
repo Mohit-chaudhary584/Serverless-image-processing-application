@@ -3,21 +3,68 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --header-bg-color: #333;
+    --header-text-color: white;
+    --primary-color: #219191;
+    --hover-color: #26a9a9;
+    --section-bg-color: #fff;
+    --secondary-bg-color: #e3ecec;
+    --button-bg-color: #219191;
+    --button-text-color: white;
+    --link-hover-bg-color: #26a9a96f;
+    --footer-bg-color: #333;
+    --footer-text-color: white;
+    --footer-subtext-color: #888;
+    --navbar-color: #333;
+    --form-bg-color: #fff;
+    --paragraph-color: #555;
+    --border-color: #ccc;
+    --extra-bg-color: #e3ecec;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f4f4f9;
+    --header-bg-color: #916ABD;
+    --header-text-color: #f4f4f9;
+    --primary-color: #916ABD;
+    --hover-color: #BB86FC;
+    --section-bg-color: #1f1f1f;
+    --secondary-bg-color: #1f1f1f;
+    --button-bg-color: #916ABD;
+    --button-text-color: black;
+    --link-hover-bg-color: #bb86fc26;
+    --footer-bg-color: #121212;
+    --footer-text-color: #f4f4f9;
+    --footer-subtext-color: #888;
+    --navbar-color: #2C232F;
+    --form-bg-color: #1f1f1f;
+    --paragraph-color: #c1c1c1;
+    --border-color: #4e4e4e;
+    --extra-bg-color: #bb86fc26;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: var(--navbar-color);
     width: 100%;
     z-index: 9999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--box-shadow-color);
 }
 
 #navbar {
@@ -35,41 +82,43 @@ header {
     padding: 0px;
 }
 
-#list>li>a {
-    color: white;
+#list > li > a {
+    color: var(--header-text-color);
     text-decoration: none;
     padding: 10px 18px;
     font-weight: 500;
 }
 
-#list>li>a:hover {
-    background-color: #e3ecec;
-    color: black;
+#list > li > a:hover {
+    background-color: var(--link-hover-bg-color);
+    color: #fff;
 }
 
 #bar {
-    color: white;
+    color: var(--header-text-color);
     font-size: 17px;
-    background-color: #219191;
+    background-color: var(--primary-color);
     padding: 8px 18px;
     cursor: pointer;
 }
 
 #bar:hover {
-    background-color: #26a9a9;
+    background-color: var(--hover-color);
 }
 
 #user {
-    color: white;
+    justify-content: center;
+    color: var(--header-text-color);
     display: flex;
     align-items: center;
-    padding: 11px 15px;
-    background-color: #219191;
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
     cursor: pointer;
 }
 
 #user:hover {
-    background-color: #26a9a9;
+    background-color: var(--hover-color);
 }
 
 #project {
@@ -81,11 +130,11 @@ header {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 60px;
-    color: #333;
+    color: var(--text-color);
 }
 
 #project span {
-    color: #219191;
+    color: var(--primary-color);
 }
 
 #container {
@@ -99,10 +148,10 @@ header {
 #drop-area {
     width: 650px;
     height: 300px;
-    border: 2px dashed #219191;
+    border: 2px dashed var(--primary-color);
     border-radius: 10px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--section-bg-color);
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -122,12 +171,12 @@ header {
 }
 
 #drop-area:hover {
-    background-color: #e0f7f7;
+    background-color: var(--extra-bg-color);
 }
 
 #submit {
-    background-color: #219191;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -137,7 +186,7 @@ header {
 }
 
 #submit:hover {
-    background-color: #26a9a9;
+    background-color: var(--hover-color);
 }
 
 #labels {
@@ -145,14 +194,14 @@ header {
     height: 300px;
     padding: 20px;
     border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--section-bg-color);
+    box-shadow: 0 2px 8px var(--box-shadow-color);
 }
 
 #labels h2 {
     font-size: 24px;
     font-weight: 600;
-    color: #219191;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -164,12 +213,12 @@ ul {
 
 ul li {
     font-size: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 #team {
     margin-top: 95px;
-    background: #e3ecec;
+    background: var(--secondary-bg-color);
     padding: 100px 20px 50px;
     text-align: center;
 }
@@ -183,14 +232,11 @@ ul li {
 #team h2 {
     font-size: 20px;
     font-weight: 500;
-    color: #219191;
+    color: var(--primary-color);
     margin-bottom: 40px;
 }
 
 #teamcontainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -199,9 +245,9 @@ ul li {
 .teamcard {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--box-shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -225,19 +271,19 @@ ul li {
     font-size: 22px;
     font-weight: 600;
     margin-top: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .teamcard h3 {
     font-size: 18px;
     font-weight: 400;
-    color: #888;
+    color: var(--footer-subtext-color);
     margin-top: 10px;
 }
 
 #abstract {
     padding: 80px 20px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     text-align: center;
 }
 
@@ -245,7 +291,7 @@ ul li {
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--header-bg-color);
 }
 
 #abstract p {
@@ -253,18 +299,18 @@ ul li {
     font-size: 20px;
     line-height: 1.6;
     padding: 0 30px;
-    color: #555;
+    color: var(--paragraph-color);
 }
 
 #contact {
-    background-color: #e3ecec;
+    background-color: var(--secondary-bg-color);
     padding: 60px 0;
 }
 
 #contactcontainer {
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin: 0px 50px;
     gap: 30px;
 }
 
@@ -276,49 +322,52 @@ ul li {
 .contactcard h1 {
     font-size: 30px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
 .contactcard h2 {
     font-size: 20px;
     font-weight: 500;
-    color: #219191;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
 .contactcard p {
     font-size: 18px;
-    color: #555;
+    color: var(--paragraph-color);
     margin-bottom: 10px;
 }
 
 .contactcard i {
-    color: #219191;
+    color: var(--primary-color);
     font-size: 20px;
     margin-right: 10px;
 }
 
 .formcard {
-    width: 58%;
-    background-color: #fff;
+    border: 2px dashed var(--primary-color);
+    width: 78%;
+    background-color: var(--bg-color);
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--box-shadow-color);
     border-radius: 8px;
+    color: var(--paragraph-color);
 }
 
 #form input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 16px;
     outline: none;
 }
 
 #form input:focus {
-    border-color: #219191;
+    border-color: var(--button-bg-color);
 }
 
 #check {
@@ -335,8 +384,8 @@ ul li {
 
 #form button {
     width: 100%;
-    background-color: #219191;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     padding: 14px;
     font-size: 16px;
     font-weight: 600;
@@ -347,35 +396,43 @@ ul li {
 }
 
 #form button:hover {
-    background-color: #26a9a9;
+    background-color: var(--hover-color);
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    position: relative;
 }
 
 #foot h1 {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 #foot h2 {
     font-size: 16px;
     font-weight: 400;
     padding: 20px;
-    color: #ddd;
+    color: var(--footer-subtext-color);
+}
+
+#foot i {
+    color: #fff;
+}
+
+#foot p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: var(--footer-subtext-color);
 }
 
 #link i {
     font-size: 20px;
-    background-color: #219191;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--footer-text-color);
     width: 45px;
     height: 45px;
     padding: 12px;
@@ -386,30 +443,5 @@ footer {
 }
 
 #link i:hover {
-    background-color: #26a9a9;
+    background-color: var(--hover-color);
 }
-
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    padding: 50px 0;
-    background-color: #333;
-    color: #fff;
-}
-
-#foot h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#foot p {
-    font-size: 14px;
-    margin-top: 15px;
-    color: #bbb;
-}
-
-#goback i {
-    color: white;
-}
-

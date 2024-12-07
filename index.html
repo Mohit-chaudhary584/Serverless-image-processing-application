@@ -6,23 +6,23 @@
     <title>Image Upload and Recognition</title>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1204.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" />
 </head>
 <body>
     <header>
-        <nav id = "navbar">
-            <ul id = "list">
-                <div id = "bar"><i class="fa-solid fa-bars"></i></div>
+        <nav id="navbar">
+            <ul id="list">
+                <div id="bar"><i class="fa-solid fa-bars"></i></div>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#abstract">Abstarct</a></li>
+                <li><a href="#abstract">Abstract</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div id = "user"><i class="fa-regular fa-user"></i></div>
+            <div id="user"><i class="fa-solid fa-moon"></i></div>
         </nav>
     </header>
     <main>
-        <section id = "project">
+        <section id="project">
             <h1>Serverless Image <span>Processing Application</span></h1>
             <div id="container">
                 <div>
@@ -39,15 +39,10 @@
             </div>
             <button id="submit" type="submit" form="upload-form">Upload Image</button>
         </section>
-        <section id = "team">
+        <section id="team">
             <h1>OUR TEAM</h1>
             <h2>Meet the team</h2>
-            <div id = "teamcontainer">
-                <div class = "teamcard">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwdIVSqaMsmZyDbr9mDPk06Nss404fosHjLg&s" alt="Aakash">
-                    <h1>Aakash</h1>
-                    <h3>2215100001</h3>
-                </div>
+            <div id="teamcontainer">
                 <div class="teamcard">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwdIVSqaMsmZyDbr9mDPk06Nss404fosHjLg&s" alt="Mohit">
                     <h1>Mohit Chaudhary</h1>
@@ -55,29 +50,29 @@
                 </div>
             </div>
         </section>
-        <section id = "abstract">
+        <section id="abstract">
             <h1>ABSTRACT</h1>
             <p>The AWS Serverless Image Processing System is a web-based application designed to leverage the power of Amazon Web Services (AWS) 
-            serverless architecture to deliver efficient and scalable image recognition capabilities. This project focuses on creating a 
-            seamless user experience for uploading and analyzing images in real time. Users can upload images via a simple and intuitive web 
-            interface. These images are stored securely in an AWS S3 bucket, and AWS Lambda functions are triggered to process the uploads and
-             invoke AWS Rekognition for object and element detection. The recognition results are displayed on the same page, providing 
-             immediate feedback to users. Additionally, the results are stored in AWS DynamoDB for future reference or analysis.
-            <br></br>
-            The system demonstrates the integration of multiple AWS services, including S3 for storage, Lambda for serverless processing, 
-            Rekognition for image analysis, API Gateway for communication, and DynamoDB for structured data storage. By using a serverless 
-            architecture, the system achieves high scalability, cost-effectiveness, and minimal maintenance requirements. The implementation 
-            plan includes the step-by-step development of all components, from frontend design using HTML and JavaScript to backend processing
-             and database integration.
-            <br></br>
-            This project not only showcases the practical application of serverless technologies but also highlights the flexibility and 
-            efficiency of AWS services in handling real-world problems. The expected outcomes include a fully functional and reliable 
-            application that provides real-time image recognition capabilities, enabling users to gain insights from uploaded images 
-            effortlessly. It is a testament to the potential of serverless architectures to build robust, scalable, and user-friendly 
-            applications for a variety of use cases in the domain of image analysis and beyond.</p>
+                serverless architecture to deliver efficient and scalable image recognition capabilities. This project focuses on creating a 
+                seamless user experience for uploading and analyzing images in real time. Users can upload images via a simple and intuitive web 
+                interface. These images are stored securely in an AWS S3 bucket, and AWS Lambda functions are triggered to process the uploads and
+                 invoke AWS Rekognition for object and element detection. The recognition results are displayed on the same page, providing 
+                 immediate feedback to users. Additionally, the results are stored in AWS DynamoDB for future reference or analysis.
+                <br></br>
+                The system demonstrates the integration of multiple AWS services, including S3 for storage, Lambda for serverless processing, 
+                Rekognition for image analysis, API Gateway for communication, and DynamoDB for structured data storage. By using a serverless 
+                architecture, the system achieves high scalability, cost-effectiveness, and minimal maintenance requirements. The implementation 
+                plan includes the step-by-step development of all components, from frontend design using HTML and JavaScript to backend processing
+                 and database integration.
+                <br></br>
+                This project not only showcases the practical application of serverless technologies but also highlights the flexibility and 
+                efficiency of AWS services in handling real-world problems. The expected outcomes include a fully functional and reliable 
+                application that provides real-time image recognition capabilities, enabling users to gain insights from uploaded images 
+                effortlessly. It is a testament to the potential of serverless architectures to build robust, scalable, and user-friendly 
+                applications for a variety of use cases in the domain of image analysis and beyond.</p>
         </section>
-        <section id = "contact">
-            <div id = "contactcontainer">
+        <section id="contact">
+            <div id="contactcontainer">
                 <div class="contactcard">
                     <h1>Contact Us</h1>
                     <h2>Address</h2>
@@ -87,14 +82,14 @@
                     <p><i class="fa-regular fa-envelope"></i> mohit.chaudhary_cs.ccv22@gla.ac.in</p>
                 </div>
                 <div class="formcard">
-                    <form action="#" id = "form">
+                    <form action="#" id="form">
                         <p>Name</p>
                         <input type="text" required>
                         <p>Email</p>
                         <input type="email" required>
                         <p>Message</p>
                         <input type="text" required>
-                        <div id = "check">
+                        <div id="check">
                             <input type="checkbox" checked>
                             <p>I Like It!</p>
                         </div>
@@ -105,20 +100,20 @@
         </section>
     </main>
     <footer>
-        <section id = "foot">
+        <section id="foot">
             <h1>Follow us</h1>
-            <div id = "link">
+            <div id="link">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <h2>Lorem ipsum dolor sit.</h2>
+            <h2>Reach Us</h2>
             <div id="goback">
                 <a href="#project"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>
         </section>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
